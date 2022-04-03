@@ -1,4 +1,31 @@
-.constainer{
+body{
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.container{
+    border-color: blue;
+    border-width: 10px;
+    border-style: solid;
+    
+}
+
+.btn{
+    
+    font-weight: 400;
+    background-color: red;
+    border-style: solid;
+    width: auto;
+    height: 50px;
+
+}
+
+.btn:active{
+    background-color: blue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
