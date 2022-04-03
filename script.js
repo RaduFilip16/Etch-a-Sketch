@@ -4,6 +4,7 @@ canvas(16)
 
 function canvas(dimension){
 /* Creates 16 rows */
+let color = 16777215;
 for(let j = 0; j < dimension; j++ ){
     const row = document.createElement('div');
     row.style.cssText = "display: flex; flex-wrap: no-wrap;";
@@ -13,8 +14,11 @@ for(let j = 0; j < dimension; j++ ){
         square.style.cssText = "height:auto; aspect-ratio: 1/1;flex-grow:1; background-color: red; border: white; border-style: solid; border-width: 2%";
         row.appendChild(square);
         square.addEventListener('mouseover', function(e){
-            let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-             e.target.style.background = `#${randomColor}`;
+             tileColor = color.toString(16);
+             e.target.style.background = `#${tileColor}`;
+             if(color >= 1710618)
+             color -= 1710618;
+             
     });
     /* Each row is then inserted into the main div container */
     container.appendChild(row)
