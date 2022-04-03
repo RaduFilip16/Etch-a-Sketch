@@ -1,9 +1,6 @@
 const container = document.querySelector('div');
+/* First layout starts automatically 16 by 16 squares */
 canvas(16)
-
-
-
-
 
 function canvas(dimension){
 /* Creates 16 rows */
@@ -24,11 +21,15 @@ for(let j = 0; j < dimension; j++ ){
 }
 }
 }
-
+/* Event listener for the button that resets layout and sets new dimension */
 const btn = document.querySelector('.btn');
 btn.addEventListener('click', function(){
-    let dimension = parseInt(prompt("Choose new canvas dimension"));
+    let dimension = parseInt(prompt("Choose new canvas dimension", 16));
+    if(dimension > 100 || isNaN(dimension)){
+        alert("Type a number between 1 and 100");
+    }
+    else{
     container.innerHTML = "";
-
     canvas(dimension);
+    }
 });
