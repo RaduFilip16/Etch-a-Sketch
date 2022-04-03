@@ -3,6 +3,10 @@ html,body{
     width: 100%;
 }
 
+h1{
+    font-size: 100px;
+    color: red;
+}
 body{
     display: flex;
     /*justify-content: space-around;*/
